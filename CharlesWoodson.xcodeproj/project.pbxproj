@@ -9,19 +9,21 @@
 /* Begin PBXBuildFile section */
 		C5C433051BFAC49000B426F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C433041BFAC49000B426F0 /* AppDelegate.swift */; };
 		C5C433071BFAC49000B426F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C433061BFAC49000B426F0 /* ViewController.swift */; };
-		C5C4330A1BFAC49000B426F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5C433081BFAC49000B426F0 /* Main.storyboard */; };
 		C5C4330C1BFAC49000B426F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5C4330B1BFAC49000B426F0 /* Assets.xcassets */; };
 		C5C4330F1BFAC49000B426F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5C4330D1BFAC49000B426F0 /* LaunchScreen.storyboard */; };
+		C5C433201BFC2D2F00B426F0 /* WoodsonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C4331F1BFC2D2F00B426F0 /* WoodsonViewController.swift */; };
+		C5C433221BFD2A2700B426F0 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C433211BFD2A2700B426F0 /* ImageCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C5C433011BFAC49000B426F0 /* CharlesWoodson.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CharlesWoodson.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5C433041BFAC49000B426F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5C433061BFAC49000B426F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C5C433091BFAC49000B426F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C5C4330B1BFAC49000B426F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C5C4330E1BFAC49000B426F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C5C433101BFAC49000B426F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5C4331F1BFC2D2F00B426F0 /* WoodsonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WoodsonViewController.swift; sourceTree = "<group>"; };
+		C5C433211BFD2A2700B426F0 /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +58,8 @@
 			children = (
 				C5C433041BFAC49000B426F0 /* AppDelegate.swift */,
 				C5C433061BFAC49000B426F0 /* ViewController.swift */,
-				C5C433081BFAC49000B426F0 /* Main.storyboard */,
+				C5C4331F1BFC2D2F00B426F0 /* WoodsonViewController.swift */,
+				C5C433211BFD2A2700B426F0 /* ImageCell.swift */,
 				C5C4330B1BFAC49000B426F0 /* Assets.xcassets */,
 				C5C4330D1BFAC49000B426F0 /* LaunchScreen.storyboard */,
 				C5C433101BFAC49000B426F0 /* Info.plist */,
@@ -124,7 +127,6 @@
 			files = (
 				C5C4330F1BFAC49000B426F0 /* LaunchScreen.storyboard in Resources */,
 				C5C4330C1BFAC49000B426F0 /* Assets.xcassets in Resources */,
-				C5C4330A1BFAC49000B426F0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,21 +138,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5C433071BFAC49000B426F0 /* ViewController.swift in Sources */,
+				C5C433221BFD2A2700B426F0 /* ImageCell.swift in Sources */,
 				C5C433051BFAC49000B426F0 /* AppDelegate.swift in Sources */,
+				C5C433201BFC2D2F00B426F0 /* WoodsonViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		C5C433081BFAC49000B426F0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C5C433091BFAC49000B426F0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C5C4330D1BFAC49000B426F0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -249,10 +245,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CharlesWoodson/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = testy.CharlesWoodson;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CharlesWoodson-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -260,10 +259,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CharlesWoodson/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = testy.CharlesWoodson;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CharlesWoodson-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -286,6 +287,7 @@
 				C5C433151BFAC49000B426F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
