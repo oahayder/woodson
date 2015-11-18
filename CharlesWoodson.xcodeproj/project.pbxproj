@@ -12,10 +12,10 @@
 		C5C4330C1BFAC49000B426F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5C4330B1BFAC49000B426F0 /* Assets.xcassets */; };
 		C5C4330F1BFAC49000B426F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5C4330D1BFAC49000B426F0 /* LaunchScreen.storyboard */; };
 		C5C433201BFC2D2F00B426F0 /* WoodsonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C4331F1BFC2D2F00B426F0 /* WoodsonViewController.swift */; };
-		C5C433221BFD2A2700B426F0 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C433211BFD2A2700B426F0 /* ImageCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C5807F201BFD3E4C00082948 /* CharlesWoodson-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CharlesWoodson-Bridging-Header.h"; sourceTree = "<group>"; };
 		C5C433011BFAC49000B426F0 /* CharlesWoodson.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CharlesWoodson.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5C433041BFAC49000B426F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5C433061BFAC49000B426F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -23,7 +23,6 @@
 		C5C4330E1BFAC49000B426F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C5C433101BFAC49000B426F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5C4331F1BFC2D2F00B426F0 /* WoodsonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WoodsonViewController.swift; sourceTree = "<group>"; };
-		C5C433211BFD2A2700B426F0 /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +39,7 @@
 		C5C432F81BFAC49000B426F0 = {
 			isa = PBXGroup;
 			children = (
+				C5807F201BFD3E4C00082948 /* CharlesWoodson-Bridging-Header.h */,
 				C5C433031BFAC49000B426F0 /* CharlesWoodson */,
 				C5C433021BFAC49000B426F0 /* Products */,
 			);
@@ -59,7 +59,6 @@
 				C5C433041BFAC49000B426F0 /* AppDelegate.swift */,
 				C5C433061BFAC49000B426F0 /* ViewController.swift */,
 				C5C4331F1BFC2D2F00B426F0 /* WoodsonViewController.swift */,
-				C5C433211BFD2A2700B426F0 /* ImageCell.swift */,
 				C5C4330B1BFAC49000B426F0 /* Assets.xcassets */,
 				C5C4330D1BFAC49000B426F0 /* LaunchScreen.storyboard */,
 				C5C433101BFAC49000B426F0 /* Info.plist */,
@@ -138,7 +137,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5C433071BFAC49000B426F0 /* ViewController.swift in Sources */,
-				C5C433221BFD2A2700B426F0 /* ImageCell.swift in Sources */,
 				C5C433051BFAC49000B426F0 /* AppDelegate.swift in Sources */,
 				C5C433201BFC2D2F00B426F0 /* WoodsonViewController.swift in Sources */,
 			);
