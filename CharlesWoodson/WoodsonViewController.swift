@@ -18,7 +18,7 @@ class WoodsonViewController: UIViewController, UITextFieldDelegate, UICollection
         super.viewDidLoad()
         //self.view.frame = CGRectMake(75,0,400,600)
         self.view.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.3)
-                
+        
         let prompt: UITextView = UITextView()
         prompt.text = "You asked for " + String(self.numImages) + " Charles Woodsons!"
         prompt.frame = CGRectMake(75,100,400,100)
@@ -29,7 +29,7 @@ class WoodsonViewController: UIViewController, UITextFieldDelegate, UICollection
         button.backgroundColor = UIColor.blackColor()
         button.setTitleColor(UIColor.grayColor(), forState: UIControlState.Normal)
         button.setTitle("Cool!", forState: UIControlState.Normal)
-        button.addTarget(self, action: "goButtonAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        button.addTarget(self, action: "coolButtonAction:", forControlEvents: UIControlEvents.TouchUpInside)
         
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 20, left: 10, bottom: 10, right: 10)
@@ -50,6 +50,7 @@ class WoodsonViewController: UIViewController, UITextFieldDelegate, UICollection
         if self.numImages == nil {
             return 0
         }
+        
         return self.numImages
     }
     
@@ -61,8 +62,7 @@ class WoodsonViewController: UIViewController, UITextFieldDelegate, UICollection
         return cell
     }
     
-    func goButtonAction(sender:UIButton!)
-    {
+    func coolButtonAction(sender:UIButton!) {
         self.presentingViewController!.dismissViewControllerAnimated(true, completion: nil)
     }
 
