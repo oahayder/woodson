@@ -15,12 +15,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.grayColor()
+        self.view.backgroundColor = UIColor.yellowColor()
         
         let prompt: UITextView = UITextView()
         prompt.text = "How many Charles Woodsons do you want to see?"
         prompt.frame = CGRectMake(100,100,200,50)
-        prompt.backgroundColor = UIColor.grayColor()
+        prompt.backgroundColor = UIColor.yellowColor()
         prompt.editable = false
         
         let button   = UIButton(type: UIButtonType.System) as UIButton
@@ -29,14 +29,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
         button.setTitleColor(UIColor.grayColor(), forState: UIControlState.Normal)
         button.setTitle("Go!", forState: UIControlState.Normal)
         button.addTarget(self, action: "goButtonAction:", forControlEvents: UIControlEvents.TouchUpInside)
+        
         self.validNumberField = UITextField()
-        self.validNumberField.frame = CGRectMake(175, 270, 50, 30)
+        self.validNumberField.frame = CGRectMake(175, 200, 50, 30)
         self.validNumberField.backgroundColor = UIColor.whiteColor()
         self.validNumberField.keyboardType = UIKeyboardType.NumberPad
         
         self.view.addSubview(prompt)
         self.view.addSubview(validNumberField)
         self.view.addSubview(button)
+        
     }
 
     func goButtonAction(sender:UIButton!)
@@ -52,6 +54,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         let numImagesString = self.validNumberField.text!
         wvc.numImages = Int(numImagesString)
         wvc.providesPresentationContextTransitionStyle = true
+        wvc.modalPresentationStyle = .OverFullScreen
         self.presentViewController(wvc, animated: true, completion: nil)
     }
     

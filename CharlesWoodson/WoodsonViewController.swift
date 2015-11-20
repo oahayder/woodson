@@ -13,32 +13,38 @@ class WoodsonViewController: UIViewController, UITextFieldDelegate, UICollection
     
     var collectionView: UICollectionView!
     var numImages: Int!
+    
+    // 320 x 568
+    var x = 200.0
+    var y = 0.0
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.grayColor()
-        // self.modalPresentationStyle = 2
+        //self.view.frame = CGRectMake(75,0,400,600)
+        self.view.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.3)
+        
         let prompt: UITextView = UITextView()
         prompt.text = "You asked for " + String(self.numImages) + " Charles Woodsons!"
-        prompt.frame = CGRectMake(100,100,200,50)
-        prompt.backgroundColor = UIColor.grayColor()
+        prompt.frame = CGRectMake(75,100,400,100)
         prompt.editable = false
         
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 20, left: 10, bottom: 10, right: 10)
         layout.itemSize = CGSize(width: 90, height: 120)
         
-        collectionView = UICollectionView(frame: CGRectMake(0,200,400,600), collectionViewLayout: layout)
+        collectionView = UICollectionView(frame: CGRectMake(75,200,350,600), collectionViewLayout: layout)
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
-        collectionView.backgroundColor = UIColor.grayColor()
-        self.view.addSubview(collectionView)
-
+        collectionView.backgroundColor = UIColor.whiteColor()
         self.view.addSubview(prompt)
+        self.view.addSubview(collectionView)
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if self.numImages == nil {
+            return 0
+        }
         return self.numImages
     }
     
@@ -49,4 +55,6 @@ class WoodsonViewController: UIViewController, UITextFieldDelegate, UICollection
         cell.backgroundView = woodsonImage
         return cell
     }
+    
+
 }
