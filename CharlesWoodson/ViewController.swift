@@ -38,18 +38,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.view.addSubview(prompt)
         self.view.addSubview(validNumberField)
         self.view.addSubview(button)
-        
     }
 
     func goButtonAction(sender:UIButton!)
     {
-//        if string.characters.count == 0 {
-//            return true
-//        }
-//        let currentText:Int? = Int(textField.text!)
-//        
-//        return currentText <= 20
-//        self.performSegueWithIdentifier("GoToViewController", sender:self)
         let wvc = WoodsonViewController()
         let numImagesString = self.validNumberField.text!
         wvc.numImages = Int(numImagesString)
